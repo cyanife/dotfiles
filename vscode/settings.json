@@ -1,0 +1,43 @@
+// 将设置放入此文件中以覆盖默认设置
+{
+    "editor.fontSize": 16,
+    "workbench.statusBar.visible": true,
+    "python.linting.enabled": false,
+
+    "workbench.iconTheme": "vscode-icons",
+    "git.enableSmartCommit": true,
+    "terminal.integrated.shell.windows": "ubuntu.exe",
+    "terminal.integrated.shellArgs.windows": ["run"],
+
+    // Vim Configuration
+
+    // Use system clipboard for unnamed register.
+    "vim.useSystemClipboard": true,
+    // What key should <leader> map to in remappings?
+    "vim.leader": ",",
+    // Enable the EasyMotion plugin for Vim.
+    "vim.easymotion": true,
+    "vim.handleKeys": {
+        "<C-f>": false
+    },
+
+    // Nord theme config
+    "workbench.colorTheme": "Nord",
+    "editor.tokenColorCustomizations": {
+        "textMateRules": [{
+            "name": "Comment",
+            "scope": "comment",
+            "settings": {
+                "foreground": "#616e88"
+            }
+        }]
+    },
+
+    "editor.minimap.enabled": false,
+    "editor.renderWhitespace": "none",
+    "git.autofetch": true,
+    "git.confirmSync": false,
+
+    // Enable/disable default YAML formatter (requires restart)
+    "yaml.format.enable": false,
+}
