@@ -9,7 +9,9 @@ source ~/.zinit/bin/zinit.zsh
 #---------------------------------------------------------------
 # !! REQUIRED !! 
 # sudo apt install subversion
+# sudo apt install unzip
 # compaudit | xargs sudo chmod g-w,o-w
+# When error occured, try 'zinit delete <plugin/script>' to fix
 #---------------------------------------------------------------
 
 #===============================================================
