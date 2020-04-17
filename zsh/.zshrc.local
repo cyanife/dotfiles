@@ -1,7 +1,7 @@
 #===============================================================
 # $HOME/.zshrc.local FILE for ZSH 5.4+
 # @cyanife
-# Last modified:  Fri Apr 17 18:37:36 2020
+# Last modified: Sat Apr 18 01:33:29 JST 2020
 #===============================================================
 source ~/.zinit/bin/zinit.zsh
 
@@ -97,7 +97,7 @@ zinit snippet 'https://github.com/ogham/exa/blob/master/contrib/completions.zsh'
 # ALIAS
 #-----------------------
 alias ls=exa
-alias ll="ls -al"
+alias ll="ls -al --icons"
 
 #-----------------------
 # OTHER SETTINGS
@@ -124,13 +124,13 @@ zstyle ':completion:*:*sh:*:' tag-order files
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=5' #PURPLE
 
 #-----------------------
-# bat 
+# bat
 #-----------------------
 # bat color theme
 export BAT_THEME="Solarized (dark)"
 
 #-----------------------
-# fzf 
+# fzf
 #-----------------------
 # use fzf with fd
 export FZF_DEFAULT_COMMAND='fd --type f'
@@ -162,4 +162,4 @@ zstyle ':fzf-tab:complete:cd:*' extra-opts --preview=$extract'exa -1 --color=alw
 
 
 
-# ==-== EOF ==-== 
+# ==-== EOF ==-==
