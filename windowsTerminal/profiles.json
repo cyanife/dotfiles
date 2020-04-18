@@ -12,8 +12,6 @@
         "defaults":
         {
             // Put settings here that you want to apply to all profiles
-                "useAcrylic" : true,
-                "acrylicOpacity" : 0.75
         },
         "list":
         [
@@ -22,16 +20,14 @@
                 "hidden": false,
                 "name": "Ubuntu",
                 "source": "Windows.Terminal.Wsl",
-                "colorScheme" : "babyFairy",
+                "startingDirectory" : "//wsl$/Ubuntu/home/cyanife",
                 "closeOnExit" : true,
+                // Appearance
+                "colorScheme" : "babyFairy",
                 "fontFace" : "CaskaydiaCove NF",
                 "fontSize" : 14,
-                "useAcrylic" : true,
-                "acrylicOpacity" : 0,
                 "cursorShape" : "emptyBox",
                 "backgroundImage" : "ms-appdata:///local/xx.jpg",
-                "backgroundImageOpacity" : 0.75,
-                "suppressApplicationTitle":true,
                 "backgroundImageStretchMode" : "uniformToFill",
                 "backgroundImageAlignment" : "bottomRight"
             },
@@ -47,23 +43,50 @@
                 "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
                 "name": "cmd",
                 "commandline": "cmd.exe",
-                "hidden": false
+                "hidden": false,
+                // Appearance
+                "useAcrylic" : true,
+                "acrylicOpacity" : 0.75,
+                "experimental.retroTerminalEffect": true,
+                "fontSize" : 14,
+                "foreground":"#ffffff"
             },
             {
                 "guid": "{21b0d33e-ac4e-4f0b-b0f8-4921c861cea0}",
-                "hidden": false,
-                "commandline" : "cmd.exe /K %USERPROFILE%\\miniconda3\\Scripts\\activate.bat %USERPROFILE%\\miniconda3",
-                "icon" : "ms-appdata:///local/anaconda.ico",
                 "name" : "miniconda3",
-                "startingDirectory" : "%USERPROFILE%"
+                "commandline" : "cmd.exe /K %USERPROFILE%\\miniconda3\\Scripts\\activate.bat %USERPROFILE%\\miniconda3",
+                "hidden": false,
+                "icon" : "ms-appdata:///local/anaconda.ico",
+                "startingDirectory" : "%USERPROFILE%",
+                // Appearance
+                "useAcrylic" : true,
+                "acrylicOpacity" : 0.75,
+                "backgroundImage" : "ms-appdata:///local/anaconda.ico",
+                "backgroundImageStretchMode" : "none",
+                "backgroundImageAlignment" : "bottomRight",
+                "backgroundImageOpacity": 0.75,
+                "experimental.retroTerminalEffect": true,
+                "fontSize" : 14,
+                "foreground":"#00ff00"
             },
             {
                 "guid": "{0086e583-ca76-4d68-b3d7-b113badf9153}",
-                "hidden": false,
                 "name": "Developer Command Prompt for VS 2019",
                 "commandline": "cmd.exe /K \"C:/Program Files (x86)/Microsoft Visual Studio/2019/community/Common7/Tools/VsDevCmd.bat\"",
+                "hidden": false,
                 "icon" : "ms-appdata:///local/visualstudio.ico",
-                "startingDirectory": "%USERPROFILE%"
+                "startingDirectory": "%USERPROFILE%",
+                // Appearance
+                "useAcrylic" : true,
+                "acrylicOpacity" : 0.75,
+                "backgroundImage" : "ms-appdata:///local/visualstudio.ico",
+                "backgroundImageStretchMode" : "none",
+                "backgroundImageAlignment" : "bottomRight",
+                "backgroundImageOpacity": 0.75,
+                "experimental.retroTerminalEffect": true,
+                "fontFace" : "Fixedsys Excelsior 3.01-L2",
+                "fontSize" : 16,
+                "foreground":"#EE82EE"
             },
             {
                 "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
@@ -81,22 +104,22 @@
             "black": "#2f2f2f",
             "red": "#ab080b",
             "green": "#70a991",
-            "yellow": "#fdb26f",
+            "yellow": "#e2a27c",
             "blue": "#5a86ad",
             "purple": "#ac80a6",
             "cyan": "#82bac2",
-            "white": "#e0dbb7",
-            "brightBlack": "#3c3f48",
+            "white": "#e4e2e3",
+            "brightBlack": "#58504e",
             "brightRed": "#e3363d",
             "brightGreen": "#8ccbaf",
-            "brightYellow": "#fcda92",
-            "brightBlue": "#b8d3ed",
+            "brightYellow": "#fdb06c",
+            "brightBlue": "#8dc4f8",
             "brightPurple": "#d19ecb",
             "brightCyan": "#96d3dc",
-            "brightWhite": "#fff9d5",
+            "brightWhite": "#fffdfe",
             "background": "#fdcac7",
             "foreground": "#003232",
-            "selectionBackground": "#e2a27c"
+            "selectionBackground": "#fcda90"
         }
     ],
 
@@ -111,6 +134,13 @@
         { "command": { "action": "switchToTab", "index": 5 }, "keys": "alt+6" },
         { "command": { "action": "switchToTab", "index": 6 }, "keys": "alt+7" },
         { "command": { "action": "switchToTab", "index": 7 }, "keys": "alt+8" },
-        { "command": { "action": "switchToTab", "index": 8 }, "keys": "alt+9" }
+        { "command": { "action": "switchToTab", "index": 8 }, "keys": "alt+9" },
+        { "command": { "action": "splitPane", "split": "auto", "splitMode": "duplicate" },"keys": "alt+shift+d" },
+        { "command": { "action": "splitPane", "split": "auto", "profile": "Ubuntu" },"keys": "alt+shift+1" },
+        { "command": { "action": "splitPane", "split": "auto", "profile": "Windows PowerShell" },"keys": "alt+shift+2" },
+        { "command": { "action": "splitPane", "split": "auto", "profile": "cmd" },"keys": "alt+shift+3" },
+        { "command": { "action": "splitPane", "split": "auto", "profile": "miniconda3" },"keys": "alt+shift+4" },
+        { "command": { "action": "splitPane", "split": "auto", "profile": "Developer Command Prompt for VS 2019" },"keys": "alt+shift+5" },
+        { "command": { "action": "splitPane", "split": "auto", "profile": "Azure Cloud Shell" },"keys": "alt+shift+6" }
     ]
 }
