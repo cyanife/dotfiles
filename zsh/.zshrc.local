@@ -34,21 +34,21 @@ zinit light skywind3000/z.lua
 # history search
 zinit light zdharma/history-search-multi-word
 
+# switch to gitroot
+zinit light mollifier/cd-gitroot
+
 # load part of OMZ freamwork/plugins
-zinit snippet OMZ::lib/completion.zsh
-zinit snippet OMZ::lib/history.zsh
-zinit snippet OMZ::lib/key-bindings.zsh
-zinit snippet OMZ::lib/theme-and-appearance.zsh
-zinit snippet OMZ::plugins/colored-man-pages/colored-man-pages.plugin.zsh
-zinit snippet OMZ::plugins/sudo/sudo.plugin.zsh
-zinit snippet OMZ::plugins/command-not-found/command-not-found.plugin.zsh
+zinit snippet OMZL::completion.zsh
+zinit snippet OMZL::history.zsh
+zinit snippet OMZL::key-bindings.zsh
+zinit snippet OMZL::theme-and-appearance.zsh
+zinit snippet OMZP::colored-man-pages
+zinit snippet OMZP::sudo
+zinit snippet OMZP::git
 
 # unarchive extension aka 'x'
 zinit ice svn
 zinit snippet OMZP::extract
-
-# OMZ git plugin
-zinit snippet OMZ::plugins/git/git.plugin.zsh
 
 # completion with fzf
 zinit ice atinit"zicompinit; zicdreplay"
