@@ -7,7 +7,7 @@ source ~/.zinit/bin/zinit.zsh
 
 
 #---------------------------------------------------------------
-# !! REQUIRED !! 
+# !! REQUIRED !!
 # sudo apt install subversion
 # sudo apt install unzip
 # compaudit | xargs sudo chmod g-w,o-w
@@ -15,20 +15,20 @@ source ~/.zinit/bin/zinit.zsh
 #---------------------------------------------------------------
 
 #===============================================================
-# ZSH PLUGINS 
+# ZSH PLUGINS
 #===============================================================
 
-# completion 
+# completion
 zinit ice blockf atpull'zinit creinstall -q .'
 zinit light zsh-users/zsh-completions
 
-# syntax highlighting 
+# syntax highlighting
 zinit light zdharma/fast-syntax-highlighting
 
-# autosuggestion 
+# autosuggestion
 zinit load zsh-users/zsh-autosuggestions
 
-# quick jump 
+# quick jump
 zinit light skywind3000/z.lua
 
 # history search
@@ -54,12 +54,18 @@ zinit snippet OMZP::extract
 zinit ice atinit"zicompinit; zicdreplay"
 zinit light Aloxaf/fzf-tab
 
+#+++++++++++++++++++++++
+# !SOLARIZED COLORSCHEME ONLY
+# use solarized-ls-color for completion menu to fix the contrast problem caused by directory bgcolor
+zinit light joel-porquet/zsh-dircolors-solarized
+#+++++++++++++++++++++++
+
 # p10k theme
 zinit ice depth=1
 zinit light romkatv/powerlevel10k
 
 #===============================================================
-# BINARYS 
+# BINARYS
 #===============================================================
 
 # PATH WRAPPER
@@ -159,7 +165,10 @@ zstyle ':completion:*:*:*:*:processes' command "ps -u $USER -o pid,user,comm,cmd
 zstyle ':fzf-tab:complete:kill:argument-rest' extra-opts --preview=$extract'ps --pid=$in[(w)1] -o cmd --no-headers -w -w' --preview-window=down:3:wrap
 # give a preview of directory by exa when completing cd
 zstyle ':fzf-tab:complete:cd:*' extra-opts --preview=$extract'exa -1 --color=always $realpath'
-
-
+#+++++++++++++++++++++++
+# !SOLARIZED COLORSCHEME ONLY
+# use solarized-ls-color for completion menu to fix the contrast problem caused by directory bgcolor
+zstyle ':completion:*' list-colors "${(@s.:.)LS_COLORS}"
+#+++++++++++++++++++++++
 
 # ==-== EOF ==-==
