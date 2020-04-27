@@ -1,16 +1,12 @@
 #===============================================================
 # $HOME/.zshrc.local FILE for ZSH 5.4+
 # @cyanife
-# Last modified: Sat Apr 18 01:33:29 JST 2020
+# Last modified: Tue Apr 21 18:57:12 JST 2020
 #===============================================================
 source ~/.zinit/bin/zinit.zsh
 
 
 #---------------------------------------------------------------
-# !! REQUIRED !!
-# sudo apt install subversion
-# sudo apt install unzip
-# compaudit | xargs sudo chmod g-w,o-w
 # When error occured, try 'zinit delete <plugin/script>' to fix
 #---------------------------------------------------------------
 
@@ -57,7 +53,7 @@ zinit light Aloxaf/fzf-tab
 #+++++++++++++++++++++++
 # !SOLARIZED COLORSCHEME ONLY
 # use solarized-ls-color for completion menu to fix the contrast problem caused by directory bgcolor
-zinit light joel-porquet/zsh-dircolors-solarized
+# zinit light joel-porquet/zsh-dircolors-solarized
 #+++++++++++++++++++++++
 
 # p10k theme
@@ -168,7 +164,7 @@ zstyle ':fzf-tab:complete:cd:*' extra-opts --preview=$extract'exa -1 --color=alw
 #+++++++++++++++++++++++
 # !SOLARIZED COLORSCHEME ONLY
 # use solarized-ls-color for completion menu to fix the contrast problem caused by directory bgcolor
-zstyle ':completion:*' list-colors "${(@s.:.)LS_COLORS}"
+# zstyle ':completion:*' list-colors "${(@s.:.)LS_COLORS}"
 #+++++++++++++++++++++++
 
 # ==-== EOF ==-==
