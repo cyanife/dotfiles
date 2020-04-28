@@ -89,6 +89,24 @@
                 "foreground":"#EE82EE"
             },
             {
+                "guid": "{65569a0b-a942-4f12-871b-93941b95e649}",
+                "hidden": false,
+                "name": "Arch(Vagrant)",
+                "commandline" : "cmd.exe /K %HOMEPATH%\\.vagrant\\arch\\connect.bat",
+                "icon" : "ms-appdata:///local/arch.ico",
+                "startingDirectory" : "%USERPROFILE%",
+                "closeOnExit": "graceful",
+                // Appearance
+                "colorScheme": "Solarized Dark",
+                "fontFace": "CaskaydiaCove NF",
+                "fontSize": 14,
+                "cursorShape" : "emptyBox",
+                "backgroundImage" : "ms-appdata:///local/arch.ico",
+                "backgroundImageStretchMode" : "none",
+                "backgroundImageAlignment" : "bottomRight",
+                "backgroundImageOpacity": 0.5
+            },
+            {
                 "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
                 "hidden": false,
                 "name": "Azure Cloud Shell",
