@@ -70,6 +70,9 @@
 
 " Vim UI {
 
+    if (has("termguicolors"))
+          set termguicolors         " 24bit true color support
+    endif
 
     set background=dark             " Assume a dark background
     colorscheme desert
@@ -77,7 +80,7 @@
     set showmode                    " Display the current mode
 
     set cursorline                  " Highlight current line
-    set cursorcolumn
+    "set cursorcolumn
 
     " set mark column color
     hi! link SignColumn   LineNr
