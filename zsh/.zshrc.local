@@ -53,7 +53,7 @@ zinit light Aloxaf/fzf-tab
 #+++++++++++++++++++++++
 # !SOLARIZED COLORSCHEME ONLY
 # use solarized-ls-color for completion menu to fix the contrast problem caused by directory bgcolor
-# zinit light joel-porquet/zsh-dircolors-solarized
+zinit light joel-porquet/zsh-dircolors-solarized
 #+++++++++++++++++++++++
 
 # p10k theme
@@ -164,7 +164,7 @@ zstyle ':fzf-tab:complete:cd:*' extra-opts --preview=$extract'exa -1 --color=alw
 #+++++++++++++++++++++++
 # !SOLARIZED COLORSCHEME ONLY
 # use solarized-ls-color for completion menu to fix the contrast problem caused by directory bgcolor
-# zstyle ':completion:*' list-colors "${(@s.:.)LS_COLORS}"
+zstyle ':completion:*' list-colors "${(@s.:.)LS_COLORS}"
 #+++++++++++++++++++++++
 
 # ==-== EOF ==-==
