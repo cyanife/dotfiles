@@ -20,7 +20,6 @@
                 "name": "Ubuntu",
                 "source": "Windows.Terminal.Wsl",
                 "startingDirectory" : "//wsl$/Ubuntu/home/cyanife",
-                "closeOnExit" : true,
                 // Appearance
                 "colorScheme" : "babyFairy",
                 "fontFace" : "CaskaydiaCove NF",
