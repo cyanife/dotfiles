@@ -41,6 +41,7 @@ zinit snippet OMZL::theme-and-appearance.zsh
 zinit snippet OMZP::colored-man-pages
 zinit snippet OMZP::sudo
 zinit snippet OMZP::git
+zinit snippet OMZP::asdf
 
 # unarchive extension aka 'x'
 zinit ice svn
