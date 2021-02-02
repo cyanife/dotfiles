@@ -38,6 +38,8 @@ zinit snippet OMZL::completion.zsh
 zinit snippet OMZL::history.zsh
 zinit snippet OMZL::key-bindings.zsh
 zinit snippet OMZL::theme-and-appearance.zsh
+zinit snippet OMZL::directories.zsh
+zinit snippet OMZL::git.zsh
 zinit snippet OMZP::colored-man-pages
 zinit snippet OMZP::sudo
 zinit snippet OMZP::git
@@ -50,6 +52,9 @@ zinit snippet OMZP::extract
 # completion with fzf
 zinit ice atinit"zicompinit; zicdreplay"
 zinit light Aloxaf/fzf-tab
+
+#autoenv
+#zinit light Tarrasch/zsh-autoenv
 
 #+++++++++++++++++++++++
 # !SOLARIZED COLORSCHEME ONLY
