@@ -3,8 +3,6 @@
 # @cyanife
 # Last modified: Tue Apr 21 18:57:12 JST 2020
 #===============================================================
-source ~/.zinit/bin/zinit.zsh
-
 
 #---------------------------------------------------------------
 # When error occured, try 'zinit delete <plugin/script>' to fix
@@ -71,7 +69,7 @@ zinit light romkatv/powerlevel10k
 #===============================================================
 
 # PATH WRAPPER
-zinit light zinit-zsh/z-a-bin-gem-node
+zinit light zdharma-continuum/zinit-annex-bin-gem-node
 
 # BINARYS
 # exa: modern alternative of 'ls'
@@ -79,12 +77,15 @@ zinit light zinit-zsh/z-a-bin-gem-node
 # fd: modern alternative of 'find'
 # bat: modern alternative of 'cat'
 # fzf: cmd-line fuzzy finder
-zinit as="null" from="gh-r" for \
-    sbin"exa* -> exa"    ogham/exa \
+zinit wait="1" lucid as="null" from="gh-r" for \
+    sbin"*/exa -> exa"    ogham/exa \
     sbin"*/rg -> rg"     BurntSushi/ripgrep \
     sbin="**/fd"         @sharkdp/fd \
     sbin="**/bat"        @sharkdp/bat \
     sbin="fzf"    junegunn/fzf-bin
+
+zinit ice from"gh-r" as"program" mv"docker* -> docker-compose"
+zinit light docker/compose
 
 # COMPLETIONS
 zinit ice mv="*.zsh -> _fzf" as="completion"
@@ -94,8 +95,12 @@ zinit snippet 'https://github.com/junegunn/fzf/blob/master/shell/key-bindings.zs
 zinit ice as="completion"
 zinit snippet 'https://github.com/robbyrussell/oh-my-zsh/blob/master/plugins/fd/_fd'
 
-zinit ice mv="*.zsh -> _exa" as="completion"
-zinit snippet 'https://github.com/ogham/exa/blob/master/contrib/completions.zsh'
+zinit ice as="completion"
+zinit snippet 'https://github.com/ogham/exa/blob/master/completions/zsh/_exa'
+
+zinit ice as"completion"
+zinit snippet https://github.com/docker/cli/blob/master/contrib/completion/zsh/_docker
+
 
 #===============================================================
 # COMMON CONFIGS
